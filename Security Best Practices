@@ -26,40 +26,28 @@ Use Authentication and Authorization:
 Encrypt Sensitive Data:
     Use strong encryption algorithms (e.g., AES-256) for data at rest and in transit.    
     Avoid storing sensitive data (e.g., passwords) in plaintext; use hashing (e.g., bcrypt, Argon2) for passwords.
-
+=========================================
 2. Application Security
-Secure APIs:
+    Secure APIs:
+        Use HTTPS (TLS) to encrypt API communications.        
+        Validate and sanitize API inputs and outputs.        
+        Implement    rate limiting and throttling to prevent abuse.  
 
-Use HTTPS (TLS) to encrypt API communications.
+     Use Security Headers:
+        Set HTTP security headers like:        
+            Content-Security-Policy (CSP) to prevent XSS.
+            Strict-Transport-Security (HSTS) to enforce HTTPS.            
+            X-Content-Type-Options to prevent MIME sniffing.            
+            X-Frame-Options to prevent clickjacking.
 
-Validate and sanitize API inputs and outputs.
+    Protect Against Common Attacks:
+        Use CSRF tokens to prevent Cross-Site Request Forgery.        
+        Implement proper session management (e.g., secure cookies, session expiration).
 
-Implement rate limiting and throttling to prevent abuse.
-
-Use Security Headers:
-
-Set HTTP security headers like:
-
-Content-Security-Policy (CSP) to prevent XSS.
-
-Strict-Transport-Security (HSTS) to enforce HTTPS.
-
-X-Content-Type-Options to prevent MIME sniffing.
-
-X-Frame-Options to prevent clickjacking.
-
-Protect Against Common Attacks:
-
-Use CSRF tokens to prevent Cross-Site Request Forgery.
-
-Implement proper session management (e.g., secure cookies, session expiration).
-
-Log and Monitor:
-
-Log security events (e.g., failed login attempts, access control violations).
-
-Monitor logs for suspicious activity using SIEM (Security Information and Event Management) tools.
-
+    Log and Monitor:
+        Log security events (e.g., failed login attempts, access control violations).        
+        Monitor logs for suspicious activity using SIEM (Security Information and Event Management) tools.
+=========================================
 3. Infrastructure Security
 Secure Servers and Networks:
 
